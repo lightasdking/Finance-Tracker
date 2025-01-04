@@ -1,0 +1,347 @@
+﻿@* @page "/transactions" *@
+
+@* @using FinanceTracker.Models *@
+@* @inject FinanceTracker.Services.UserService UserService *@
+
+@* <h1>User Transactions</h1> *@
+
+@* <!-- Filter Form --> *@
+@* <div class="filter-form"> *@
+@*     <div class="form-group"> *@
+@*         <label for="descriptionFilter">Description</label> *@
+@*         <input type="text" id="descriptionFilter" class="form-control" @bind="descriptionFilter" placeholder="Search by description" /> *@
+@*     </div> *@
+@*     <div class="form-group"> *@
+@*         <label for="startDateFilter">Start Date</label> *@
+@*         <input type="date" id="startDateFilter" class="form-control" @bind="startDateFilter" /> *@
+@*     </div> *@
+@*     <div class="form-group"> *@
+@*         <label for="endDateFilter">End Date</label> *@
+@*         <input type="date" id="endDateFilter" class="form-control" @bind="endDateFilter" /> *@
+@*     </div> *@
+@*     <button class="btn btn-primary" @onclick="ApplyFilters">Apply Filters</button> *@
+@* </div> *@
+
+@* <!-- Transactions Table --> *@
+@* <table class="table"> *@
+@*     <thead> *@
+@*         <tr> *@
+@*             <th>Transaction ID</th> *@
+@*             <th>User Name</th> *@
+@*             <th>Main Balance</th> *@
+@*             <th>Debit</th> *@
+@*             <th>Credit</th> *@
+@*             <th>Date</th> *@
+@*             <th>Description</th> *@
+@*         </tr> *@
+@*     </thead> *@
+@*     <tbody> *@
+@*         @if (filteredTransactions != null && filteredTransactions.Any()) *@
+@*         { *@
+@*             @foreach (var transaction in filteredTransactions) *@
+@*             { *@
+@*                 <tr> *@
+@*                     <td>@transaction.Id</td> *@
+@*                     <td>@Data.Users.FirstOrDefault(u => u.Id == transaction.UserId)?.Name</td> *@
+@*                     <td>@UserService.CalculateBalance(transaction.UserId, Data)</td> *@
+@*                     <td>@transaction.Debit.ToString("C")</td> *@
+@*                     <td>@transaction.Credit.ToString("C")</td> *@
+@*                     <td>@transaction.Date.ToString("MM/dd/yyyy")</td> *@
+@*                     <td>@transaction.Description</td> *@
+@*                 </tr> *@
+@*             } *@
+@*         } *@
+@*         else *@
+@*         { *@
+@*             <tr> *@
+@*                 <td colspan="7">No transactions available.</td> *@
+@*             </tr> *@
+@*         } *@
+@*     </tbody> *@
+@* </table> *@
+
+
+@* @code { *@
+@*     private AppData Data = new AppData(); *@
+@*     private TransactionModels newTransaction = new TransactionModels(); *@
+
+@*     // Filter variables *@
+@*     private string descriptionFilter = string.Empty; *@
+@*     private DateTime? startDateFilter = null; *@
+@*     private DateTime? endDateFilter = null; *@
+
+@*     private List<TransactionModels> filteredTransactions = new List<TransactionModels>(); *@
+
+@*     protected override void OnInitialized() *@
+@*     { *@
+@*         // Load initial data *@
+@*         Data = UserService.LoadData(); *@
+@*         if (Data.Transactionpage == null) *@
+@*         { *@
+@*             Data.Transactionpage = new List<TransactionModels>(); *@
+@*         } *@
+
+@*         // Apply initial filters *@
+@*         ApplyFilters(); *@
+@*     } *@
+
+@*     private void ApplyFilters() *@
+@*     { *@
+@*         // Ensure there are transactions to filter *@
+@*         if (Data.Transactionpage == null || !Data.Transactionpage.Any()) *@
+@*         { *@
+@*             filteredTransactions = new List<TransactionModels>(); *@
+@*             return; *@
+@*         } *@
+
+@*         // Apply filters *@
+@*         filteredTransactions = Data.Transactionpage *@
+@*             .Where(t => *@
+@*                 (string.IsNullOrWhiteSpace(descriptionFilter) || t.Description.Contains(descriptionFilter, StringComparison.OrdinalIgnoreCase)) && *@
+@*                 (!startDateFilter.HasValue || t.Date >= startDateFilter.Value) && *@
+@*                 (!endDateFilter.HasValue || t.Date <= endDateFilter.Value) *@
+@*             ) *@
+@*             .ToList(); *@
+
+@*         // Refresh UI *@
+@*         StateHasChanged(); *@
+@*     } *@
+
+@*     private void HandleTransactionSubmit() *@
+@*     { *@
+@*         // Add new transaction *@
+@*         newTransaction.Id = Data.Transactionpage.Count + 1; *@
+@*         newTransaction.Date = DateTime.Now; *@
+@*         Data.Transactionpage.Add(newTransaction); *@
+
+@*         // Save updated data *@
+@*         UserService.SaveData(Data); *@
+
+@*         // Reset form *@
+@*         newTransaction = new TransactionModels(); *@
+
+@*         // Re-apply filters after adding a transaction *@
+@*         ApplyFilters(); *@
+@*     } *@
+@* } *@
+@page "/transactions"
+
+@using FinanceTracker.Models
+@inject FinanceTracker.Services.UserService UserService
+
+<h1>User Transactions</h1>
+
+<!-- Filter Form -->
+<div class="filter-form">
+    <div class="form-group">
+        <label for="descriptionFilter">Description</label>
+        <input type="text" id="descriptionFilter" class="form-control" @bind="descriptionFilter" placeholder="Search by description" />
+    </div>
+    <div class="form-group">
+        <label for="startDateFilter">Start Date</label>
+        <input type="date" id="startDateFilter" class="form-control" @bind="startDateFilter" />
+    </div>
+    <div class="form-group">
+        <label for="endDateFilter">End Date</label>
+        <input type="date" id="endDateFilter" class="form-control" @bind="endDateFilter" />
+    </div>
+    <button class="btn btn-primary" @onclick="ApplyFilters">Apply Filters</button>
+</div>
+
+<!-- Transactions Table -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+            <th>User Name</th>
+            <th>Main Balance</th>
+            <th>Debit</th>
+            <th>Credit</th>
+            <th>Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (filteredTransactions != null && filteredTransactions.Any())
+        {
+            @foreach (var transaction in filteredTransactions)
+            {
+                <tr class="@GetTransactionRowClass(transaction)">
+                    <td>@transaction.Id</td>
+                    <td>@Data.Users.FirstOrDefault(u => u.Id == transaction.UserId)?.Name</td>
+                    <td>@UserService.CalculateBalance(transaction.UserId, Data)</td>
+                    <td>@transaction.Debit.ToString("C")</td>
+                    <td>@transaction.Credit.ToString("C")</td>
+                    <td>@transaction.Date.ToString("MM/dd/yyyy")</td>
+                    <td>@transaction.Description</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7">No transactions available.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Filter Form Styling */
+.filter-form {
+    background-color: #2d3748;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4a5568;
+    color: #ffffff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn {
+    background-color: #3182ce;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2d3748;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #4a5568;
+    color: #e2e8f0;
+}
+
+.table th {
+    background-color: #4a5568;
+    font-weight: bold;
+}
+
+.table tr.success {
+    background-color: #38a169;
+}
+
+.table tr.warning {
+    background-color: #d69e2e;
+}
+
+.table tr.error {
+    background-color: #e53e3e;
+}
+
+.table tr:hover {
+    background-color: #334155;
+}
+
+/* Responsive Design */
+ (max-width: 768px) {
+    .filter-form {
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+}
+</style>
+
+@code {
+    private AppData Data = new AppData();
+    private TransactionModels newTransaction = new TransactionModels();
+
+    // Filter variables
+    private string descriptionFilter = string.Empty;
+    private DateTime? startDateFilter = null;
+    private DateTime? endDateFilter = null;
+
+    private List<TransactionModels> filteredTransactions = new List<TransactionModels>();
+
+    protected override void OnInitialized()
+    {
+        // Load initial data
+        Data = UserService.LoadData();
+        if (Data.Transactionpage == null)
+        {
+            Data.Transactionpage = new List<TransactionModels>();
+        }
+
+        // Apply initial filters
+        ApplyFilters();
+    }
+
+    private void ApplyFilters()
+    {
+        // Ensure there are transactions to filter
+        if (Data.Transactionpage == null || !Data.Transactionpage.Any())
+        {
+            filteredTransactions = new List<TransactionModels>();
+            return;
+        }
+
+        // Apply filters
+        filteredTransactions = Data.Transactionpage
+            .Where(t =>
+                (string.IsNullOrWhiteSpace(descriptionFilter) || t.Description.Contains(descriptionFilter, StringComparison.OrdinalIgnoreCase)) &&
+                (!startDateFilter.HasValue || t.Date >= startDateFilter.Value) &&
+                (!endDateFilter.HasValue || t.Date <= endDateFilter.Value)
+            )
+            .ToList();
+
+        // Refresh UI
+        StateHasChanged();
+    }
+
+    private string GetTransactionRowClass(TransactionModels transaction)
+    {
+        if (transaction.Credit > transaction.Debit) return "success"; // Credit > Debit
+        if (transaction.Credit == transaction.Debit) return "warning"; // Equal Credit and Debit
+        return "error"; // Debit > Credit
+    }
+
+}

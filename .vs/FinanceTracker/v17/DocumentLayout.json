@@ -1,0 +1,322 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\pages\\transactions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\pages\\transactions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\pages\\debtmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\pages\\debtmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\pages\\cashoutflow.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\pages\\cashoutflow.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\pages\\cashinflow.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\pages\\cashinflow.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\models\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\models\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\models\\appdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\models\\appdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\models\\transactionsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\models\\transactionsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\lenovo\\source\\repos\\financetracker\\financetracker\\financetracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{011AE5FA-420F-4768-A59C-7152A790CC3E}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\financetracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 317,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\_Imports.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T12:07:57.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:22:47.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Transactions.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Transactions.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Pages\\Transactions.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Transactions.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Pages\\Transactions.razor",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAL4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:14:59.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "FinanceTracker\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcBAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-04T13:21:53.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAACAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:07:38.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cashinflow.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Cashinflow.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Pages\\Cashinflow.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Cashinflow.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Pages\\Cashinflow.razor",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAowI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:09:24.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Userservice.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Services\\Userservice.cs",
+              "RelativeDocumentMoniker": "FinanceTracker\\Services\\Userservice.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Services\\Userservice.cs",
+              "RelativeToolTip": "FinanceTracker\\Services\\Userservice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T11:02:19.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppData.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\AppData.cs",
+              "RelativeDocumentMoniker": "FinanceTracker\\Models\\AppData.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\AppData.cs",
+              "RelativeToolTip": "FinanceTracker\\Models\\AppData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T11:04:07.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Debt.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\Debt.cs",
+              "RelativeDocumentMoniker": "FinanceTracker\\Models\\Debt.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\Debt.cs",
+              "RelativeToolTip": "FinanceTracker\\Models\\Debt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T11:04:18.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cashoutflow.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Cashoutflow.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Pages\\Cashoutflow.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Cashoutflow.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Pages\\Cashoutflow.razor",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAowJMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:10:28.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Debtmanagement.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Debtmanagement.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Pages\\Debtmanagement.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Debtmanagement.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Pages\\Debtmanagement.razor",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAowJQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:13:58.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:07:12.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Transactionsmodel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\Transactionsmodel.cs",
+              "RelativeDocumentMoniker": "FinanceTracker\\Models\\Transactionsmodel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\Transactionsmodel.cs",
+              "RelativeToolTip": "FinanceTracker\\Models\\Transactionsmodel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T11:04:40.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FinanceTracker\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\User.cs",
+              "RelativeToolTip": "FinanceTracker\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T11:04:56.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "FinanceTracker\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\MauiProgram.cs",
+              "RelativeToolTip": "FinanceTracker\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T11:00:35.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FinanceTracker",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\FinanceTracker.csproj",
+              "RelativeDocumentMoniker": "FinanceTracker\\FinanceTracker.csproj",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\FinanceTracker\\FinanceTracker\\FinanceTracker.csproj",
+              "RelativeToolTip": "FinanceTracker\\FinanceTracker.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-04T11:01:43.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 83,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

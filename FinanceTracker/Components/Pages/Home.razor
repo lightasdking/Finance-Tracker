@@ -1,0 +1,309 @@
+﻿@page "/"
+@using FinanceTracker.Models
+@inject FinanceTracker.Services.UserService UserService
+
+<h1> Dashboard</h1>
+
+<!-- Filter Section -->
+<div class="filter-section">
+    <h3>Filter Transactions</h3>
+    <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <InputDate @bind-Value="StartDate" class="form-control" id="startDate" />
+    </div>
+    <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <InputDate @bind-Value="EndDate" class="form-control" id="endDate" />
+    </div>
+    <button class="btn btn-primary" @onclick="ApplyFilter">Apply Filter</button>
+</div>
+
+<!-- Summary Section -->
+<div class="summary-section">
+    <h3>Transaction Summary</h3>
+    <ul>
+        <li>Total Transactions: @TotalTransactions</li>
+        <li>Total Amount: @TotalAmount.ToString("C")</li>
+        <li>Highest Transaction: @HighestTransaction.ToString("C")</li>
+        <li>Lowest Transaction: @LowestTransaction.ToString("C")</li>
+    </ul>
+</div>
+
+<!-- Transaction History -->
+<div class="history-section">
+    <h3>Transaction History</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>User Name</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Date</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (FilteredTransactions != null && FilteredTransactions.Any())
+            {
+                @foreach (var transaction in FilteredTransactions)
+                {
+                    <tr>
+                        <td>@transaction.Id</td>
+                        <td>@Data.Users.FirstOrDefault(u => u.Id == transaction.UserId)?.Name</td>
+                        <td>@transaction.Debit.ToString("C")</td>
+                        <td>@transaction.Credit.ToString("C")</td>
+                        <td>@transaction.Date.ToString("MM/dd/yyyy")</td>
+                        <td>@transaction.Description</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6">No transactions found for the selected date range.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<style>
+    /* General Styling */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #1e293b;
+        color: #e2e8f0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    /* Filter Section */
+    .filter-section {
+        background-color: #2d3748;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 800px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+        .filter-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .filter-section .form-group {
+            margin-bottom: 15px;
+        }
+
+        .filter-section label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #a0aec0;
+        }
+
+        .filter-section .form-control {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #4a5568;
+            color: #ffffff;
+            border: none;
+        }
+
+        .filter-section .btn {
+            display: block;
+            width: 100%;
+            background-color: #3182ce;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+            .filter-section .btn:hover {
+                background-color: #2563eb;
+            }
+
+    /* Summary Section */
+    .summary-section {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        max-width: 1000px;
+        justify-content: center;
+    }
+
+        .summary-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+            .summary-section ul li {
+                background-color: #2d3748;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+                text-align: center;
+                flex: 1 1 calc(33.33% - 10px);
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+    /* Transaction History */
+    .history-section {
+        background-color: #2d3748;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        margin: 20px auto;
+        max-width: 1000px;
+        overflow-x: auto;
+    }
+
+        .history-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .history-section .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #2d3748;
+        }
+
+            .history-section .table th,
+            .history-section .table td {
+                text-align: left;
+                padding: 12px;
+                border-bottom: 1px solid #4a5568;
+                color: #e2e8f0;
+                white-space: nowrap;
+            }
+
+            .history-section .table th {
+                background-color: #4a5568;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 1rem;
+                color: #ffffff;
+            }
+
+            .history-section .table tr:nth-child(even) {
+                background-color: #1f2933;
+            }
+
+            .history-section .table tr:hover {
+                background-color: #334155;
+            }
+
+        .history-section .view-btn {
+            background-color: #3182ce;
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+            .history-section .view-btn:hover {
+                background-color: #2563eb;
+            }
+
+    /* Responsive Design */
+     (max-width: 768px) {
+        .summary-section ul li
+
+    {
+        flex: 1 1 100%;
+    }
+
+    .filter-section,
+    .history-section {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    }
+</style>
+
+@code {
+    private AppData Data = new AppData();
+    private List<TransactionModels> FilteredTransactions = new();
+    private DateTime? StartDate;
+    private DateTime? EndDate;
+
+    // Summary variables
+    private int TotalTransactions;
+    private decimal TotalAmount;
+    private decimal HighestTransaction;
+    private decimal LowestTransaction;
+
+    protected override void OnInitialized()
+    {
+        // Load initial data
+        Data = UserService.LoadData();
+        FilteredTransactions = Data.Transactionpage;
+        UpdateSummary();
+    }
+
+    private void ApplyFilter()
+    {
+        // Filter transactions by date range
+        if (StartDate != null && EndDate != null)
+        {
+            FilteredTransactions = Data.Transactionpage
+                .Where(t => t.Date >= StartDate && t.Date <= EndDate)
+                .ToList();
+        }
+        else
+        {
+            FilteredTransactions = Data.Transactionpage;
+        }
+
+        UpdateSummary();
+    }
+
+    private void UpdateSummary()
+    {
+        // Update summary data
+        TotalTransactions = FilteredTransactions.Count;
+        TotalAmount = FilteredTransactions.Sum(t => t.Credit - t.Debit);
+        HighestTransaction = FilteredTransactions.Any()
+            ? FilteredTransactions.Max(t => Math.Max(t.Credit, t.Debit))
+            : 0;
+        LowestTransaction = FilteredTransactions.Any()
+            ? FilteredTransactions.Min(t => Math.Min(t.Credit, t.Debit))
+            : 0;
+    }
+}
